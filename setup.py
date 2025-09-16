@@ -8,7 +8,7 @@ def get_requirements(file_path:str)->List[str]:
 
     requirements = []
     with open(file_path) as file:
-        requirements=file.readlines().split('\n')
+        requirements=file.readlines()
         requirements = [req.replace('\n', ' ') for req in requirements]
 
         if HYPEN_E_DOT in requirements:
