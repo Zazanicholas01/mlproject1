@@ -18,8 +18,6 @@ class PredictPipeline:
             model = load_object(file_path=model_path)
             preprocessor = load_object(file_path=preprocessor_path)
 
-            print(features.isnull().sum(), "#########################")
-
             data_scaled = preprocessor.transform(features)
             prediction = model.predict(data_scaled)
 
